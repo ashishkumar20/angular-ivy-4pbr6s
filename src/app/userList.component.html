@@ -1,0 +1,27 @@
+<p>User list works</p>
+<button (click)="gotoUser()"> Add</button>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">FName</th>
+      <th scope="col">LName</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Password</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of usersList; let i = index">
+      <td>{{user.fname}}</td>
+      <td>{{user.lname}}</td>
+      <td>{{user.email}}</td>
+      <td>{{user.mobile}}</td>
+      <td>{{user.password}}</td>
+      <td>
+        <button (click)="gotoEdit(i)">Edit</button>
+        <button (click)="gotoDelete(i)">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
