@@ -28,7 +28,7 @@ export class userForm implements OnInit {
     console.log('In user form');
     this.route.queryParams.forEach(param => {
       console.log(param);
-      if (param) {
+      if (param.length > 0) {
         this.editUser = true;
         this.id = param.id;
         this.userForm.patchValue({

@@ -7,7 +7,6 @@ import { Router } from '@angular/router';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  name = 'Angular ' + VERSION.major;
   constructor(private router: Router) {}
   ngOnInit() {
     this.router.navigate(['user-list']);
